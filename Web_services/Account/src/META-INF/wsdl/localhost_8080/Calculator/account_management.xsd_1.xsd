@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://Webservice/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Webservice/">
+
+<xs:element name="balance_value" type="tns:balance_value"/>
+
+<xs:element name="balance_valueResponse" type="tns:balance_valueResponse"/>
+
+<xs:element name="connection" type="tns:connection"/>
+
+<xs:element name="connectionResponse" type="tns:connectionResponse"/>
+
+<xs:element name="create_acc" type="tns:create_acc"/>
+
+<xs:element name="create_accResponse" type="tns:create_accResponse"/>
+
+<xs:element name="deposit" type="tns:deposit"/>
+
+<xs:element name="depositResponse" type="tns:depositResponse"/>
+
+<xs:element name="get_account" type="tns:get_account"/>
+
+<xs:element name="get_accountResponse" type="tns:get_accountResponse"/>
+
+<xs:element name="get_depo_history" type="tns:get_depo_history"/>
+
+<xs:element name="get_depo_historyResponse" type="tns:get_depo_historyResponse"/>
+
+<xs:element name="get_with_history" type="tns:get_with_history"/>
+
+<xs:element name="get_with_historyResponse" type="tns:get_with_historyResponse"/>
+
+<xs:element name="withdrawal" type="tns:withdrawal"/>
+
+<xs:element name="withdrawalResponse" type="tns:withdrawalResponse"/>
+
+<xs:complexType name="create_acc">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="number" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="create_accResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="balance_value">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="balance_valueResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="connection">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="number" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="connectionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="withdrawal">
+<xs:sequence>
+<xs:element name="amount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="withdrawalResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deposit">
+<xs:sequence>
+<xs:element name="amount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="depositResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="get_account">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="get_accountResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="get_depo_history">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="get_depo_historyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="get_with_history">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="get_with_historyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

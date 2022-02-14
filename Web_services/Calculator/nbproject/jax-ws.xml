@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="CalculateurWS">
+      <implementation-class>Webservice.CalculateurWS</implementation-class>
+    </service>
+    <service name="account_management">
+      <implementation-class>Webservice.account_management</implementation-class>
+    </service>
+  </services>
+  <clients/>
+</jax-ws>
